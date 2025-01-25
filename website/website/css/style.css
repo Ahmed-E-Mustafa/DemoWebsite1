@@ -1,0 +1,174 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Defining custom CSS variables for theme colors */
+:root {
+  --primary-color: #047aed; /* Main theme color */
+  --secondary-color: #1c3fa8; /* Complementary theme color */
+  --dark-color: #002240; /* For darker elements like backgrounds or text */
+  --light-color: #f4f4f4; /* Light backgrounds */
+  --success-color: #5cb85c; /* Indicators for success states */
+  --error-color: #d9534f; /* Indicators for error states */
+}
+
+/* Universal Reset */
+* {
+  box-sizing: border-box; /* Maintain consistent dimensions */
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Lato', sans-serif; /* Applying the Lato font globally */
+  color: #333; /* Neutral text color */
+  line-height: 1.6; /* Enhanced readability */
+}
+
+ul {
+  list-style: none; /* Remove bullet points */
+}
+
+a {
+  text-decoration: none; /* No underline */
+  color: inherit; /* Inherit text color */
+}
+
+h1, h2 {
+  font-weight: 300; /* Lighter heading font */
+  line-height: 1.2; /* Reduce line height for headings */
+  margin: 10px 0; /* Spacing for headings */
+}
+
+p {
+  margin: 10px 0; /* Spacing for paragraphs */
+}
+
+img {
+  width: 100%; /* Make images responsive */
+}
+
+code, pre {
+  background-color: #333; /* Dark background for code */
+  color: #fff; /* White text */
+  padding: 10px; /* Add padding for clarity */
+  border-radius: 5px; /* Slightly rounded corners */
+}
+
+.hidden {
+  display: none; /* Completely hide the element */
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary-color); /* Main navbar color */
+  color: #fff; /* White text */
+  height: 70px; /* Fixed navbar height */
+  display: flex;
+  align-items: center;
+  padding: 0 20px; /* Horizontal padding */
+}
+
+.navbar ul {
+  display: flex; /* Horizontal navigation items */
+  align-items: center;
+  gap: 15px; /* Space between items */
+}
+
+.navbar a {
+  color: #fff; /* White links */
+  padding: 10px; /* Expand clickable area */
+  transition: border-bottom 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar a:hover {
+  border-bottom: 2px solid #fff; /* Underline on hover */
+}
+
+/* Showcase */
+.showcase {
+  height: 400px; /* Fixed height */
+  background: var(--primary-color); /* Themed background */
+  color: #fff; /* White text */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 2.5rem; /* Larger heading */
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase-form {
+  background: #fff; /* Contrasting form background */
+  border-radius: 10px; /* Smooth corners */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%;
+  max-width: 400px;
+  animation: slideInFromRight 1s ease-in; /* Entrance animation */
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+  border: none; /* Clean input */
+  border-bottom: 2px solid var(--dark-color); /* Underline for input fields */
+  width: 100%; /* Full width */
+  margin: 10px 0;
+  padding: 8px 0;
+  font-size: 16px;
+}
+
+.showcase-form input:focus {
+  border-color: var(--primary-color); /* Highlight active field */
+  outline: none;
+}
+
+/* Stats Section */
+.stats {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: var(--light-color); /* Light background */
+}
+
+.stats h2 {
+  color: var(--dark-color); /* Standout heading color */
+  margin-bottom: 20px;
+}
+
+.stats .grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .showcase {
+    flex-direction: column; /* Stack items vertically */
+    text-align: center;
+  }
+
+  .showcase-form {
+    margin-top: 20px; /* Add spacing */
+    animation: slideInFromBottom 1s ease-in; /* Adjust animation */
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-wrap: wrap; /* Allow items to wrap */
+    height: auto; /* Adjust height */
+  }
+
+  .navbar ul {
+    flex-direction: column; /* Stack navigation items */
+    gap: 10px;
+  }
+}
