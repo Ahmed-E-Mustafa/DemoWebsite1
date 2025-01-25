@@ -19,13 +19,15 @@
     <!-- Page Title -->
     <title>Loruki | Cloud Hosting For Everyone</title>
 
-    <!-- Inline Responsive Styles -->
+    <!-- Inline Styles -->
     <style>
         /* General Styles */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            color: #333;
+            background: #f9f9f9;
         }
 
         img {
@@ -44,18 +46,23 @@
             max-width: 1200px;
         }
 
+        h1, h2, h3 {
+            margin: 0.5rem 0;
+        }
+
         /* Navbar Styles */
         .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 1rem 0;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .navbar ul {
             display: flex;
             list-style: none;
-            padding: 0;
         }
 
         .navbar li {
@@ -64,41 +71,38 @@
 
         .navbar a {
             color: #333;
-            text-transform: uppercase;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
-        /* Mobile Navbar */
-        @media (max-width: 768px) {
-            .navbar ul {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .navbar li {
-                margin: 0.5rem 0;
-            }
+        .navbar a:hover {
+            color: #007BFF;
         }
 
-        /* Header Section */
+        /* Hero Section */
         .features-head {
-            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            background: #007BFF;
             color: white;
-            background: #333;
-            padding: 2rem 0;
+            padding: 3rem 0;
+        }
+
+        .features-head div {
+            flex: 1;
+            text-align: center;
         }
 
         .features-head img {
-            display: none;
+            flex: 1;
+            display: block;
+            margin: auto;
         }
 
         @media (min-width: 768px) {
-            .features-head {
+            .features-head div {
                 text-align: left;
-            }
-
-            .features-head img {
-                display: block;
             }
         }
 
@@ -106,9 +110,11 @@
         .features-sub-head {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 2rem;
             align-items: center;
             text-align: center;
+            padding: 2rem 0;
+            background: #f4f4f4;
         }
 
         @media (min-width: 768px) {
@@ -123,14 +129,15 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: 1.5rem;
-            text-align: center;
+            padding: 2rem 0;
         }
 
         .features-main .card {
-            background: #f4f4f4;
-            padding: 1rem;
+            background: #fff;
+            padding: 1.5rem;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         @media (min-width: 768px) {
@@ -141,15 +148,15 @@
 
         /* Footer Section */
         .footer {
-            color: white;
             background: #333;
+            color: white;
             padding: 2rem 0;
         }
 
         .footer .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
             text-align: center;
         }
 
@@ -160,24 +167,26 @@
             }
         }
 
-        .social a {
-            margin: 0 0.5rem;
+        .footer a {
             color: #ccc;
+            transition: color 0.3s;
         }
 
-        .social a:hover {
+        .footer a:hover {
             color: white;
+        }
+
+        .social a {
+            margin: 0 0.5rem;
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar Section -->
-    <header class="navbar bg-light">
+    <!-- Navbar -->
+    <header class="navbar">
         <div class="container flex">
-            <h1 class="logo">
-                <a href="index.html" aria-label="Navigate to Loruki Home">Loruki.</a>
-            </h1>
+            <h1 class="logo"><a href="index.html" aria-label="Navigate to Loruki Home">Loruki.</a></h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -188,47 +197,59 @@
         </div>
     </header>
 
-    <!-- Features Header Section -->
-    <section class="features-head bg-primary py-3">
-        <div class="container">
-            <h1 class="xl">Features</h1>
-            <p class="lead">Discover what sets Loruki apart from the competition.</p>
+    <!-- Features Header -->
+    <section class="features-head">
+        <div>
+            <h1>Features</h1>
+            <p>Discover what sets Loruki apart from the competition.</p>
         </div>
+        <img src="images/server.png" alt="Server illustration">
     </section>
 
     <!-- Sub-header Section -->
-    <section class="features-sub-head bg-light py-3">
-        <div class="container">
-            <h1 class="md">The Loruki Platform</h1>
-            <p>
-                Loruki offers unparalleled reliability, scalability, and performance to help you deploy and manage your cloud resources with ease.
-            </p>
+    <section class="features-sub-head">
+        <div>
+            <h1>The Loruki Platform</h1>
+            <p>Loruki offers unparalleled reliability, scalability, and performance to help you deploy and manage your cloud resources with ease.</p>
         </div>
+        <img src="images/server2.png" alt="Additional server illustration">
     </section>
 
-    <!-- Features Main Section -->
-    <main class="features-main my-2">
+    <!-- Features Section -->
+    <main class="features-main">
         <div class="container">
-            <div class="card flex">
-                <i class="fas fa-server fa-3x"></i>
+            <div class="card"><i class="fas fa-server fa-3x"></i>
                 <p>High-performance servers ensuring maximum uptime and speed for your applications.</p>
             </div>
-            <div class="card flex">
-                <i class="fas fa-network-wired fa-3x"></i>
+            <div class="card"><i class="fas fa-network-wired fa-3x"></i>
                 <p>Effortless network management with advanced monitoring and security tools.</p>
             </div>
-            <div class="card flex">
-                <i class="fas fa-laptop-code fa-3x"></i>
+            <div class="card"><i class="fas fa-laptop-code fa-3x"></i>
                 <p>Developer-friendly tools and APIs for streamlined cloud integration.</p>
             </div>
         </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="footer bg-dark py-5">
-        <div class="container">
-            <h1>Loruki</h1>
-            <p>&copy; 2020 Loruki</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container grid">
+            <div>
+                <h1>Loruki</h1>
+                <p>&copy; 2020 Loruki</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="docs.html">Docs</a></li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
         </div>
     </footer>
 </body>
