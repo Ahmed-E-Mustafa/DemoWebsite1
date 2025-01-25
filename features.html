@@ -1,192 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Loruki: Cloud Hosting Platform">
-    <meta name="keywords" content="cloud hosting, loruki, features, platform">
-    <meta name="author" content="Loruki Team">
-
-    <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- Page Title -->
     <title>Loruki | Cloud Hosting For Everyone</title>
-
-    <!-- Inline Styles -->
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f9f9f9;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            margin: auto;
-            max-width: 1200px;
-        }
-
-        h1, h2, h3 {
-            margin: 0.5rem 0;
-        }
-
-        /* Navbar Styles */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .navbar ul {
-            display: flex;
-            list-style: none;
-        }
-
-        .navbar li {
-            margin: 0 1rem;
-        }
-
-        .navbar a {
-            color: #333;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-
-        .navbar a:hover {
-            color: #007BFF;
-        }
-
-        /* Hero Section */
-        .features-head {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            background: #007BFF;
-            color: white;
-            padding: 3rem 0;
-        }
-
-        .features-head div {
-            flex: 1;
-            text-align: center;
-        }
-
-        .features-head img {
-            flex: 1;
-            display: block;
-            margin: auto;
-        }
-
-        @media (min-width: 768px) {
-            .features-head div {
-                text-align: left;
-            }
-        }
-
-        /* Sub-header Section */
-        .features-sub-head {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            align-items: center;
-            text-align: center;
-            padding: 2rem 0;
-            background: #f4f4f4;
-        }
-
-        @media (min-width: 768px) {
-            .features-sub-head {
-                grid-template-columns: 1fr 1fr;
-                text-align: left;
-            }
-        }
-
-        /* Features Section */
-        .features-main {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            padding: 2rem 0;
-        }
-
-        .features-main .card {
-            background: #fff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .features-main {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* Footer Section */
-        .footer {
-            background: #333;
-            color: white;
-            padding: 2rem 0;
-        }
-
-        .footer .grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .footer .grid {
-                grid-template-columns: repeat(3, 1fr);
-                text-align: left;
-            }
-        }
-
-        .footer a {
-            color: #ccc;
-            transition: color 0.3s;
-        }
-
-        .footer a:hover {
-            color: white;
-        }
-
-        .social a {
-            margin: 0 0.5rem;
-        }
-    </style>
 </head>
-
 <body>
     <!-- Navbar -->
-    <header class="navbar">
+    <div class="navbar">
         <div class="container flex">
-            <h1 class="logo"><a href="index.html" aria-label="Navigate to Loruki Home">Loruki.</a></h1>
+             <h1 class="logo"><a href="index.html">Loruki.</a></h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -195,47 +21,86 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </div>
 
-    <!-- Features Header -->
-    <section class="features-head">
-        <div>
-            <h1>Features</h1>
-            <p>Discover what sets Loruki apart from the competition.</p>
-        </div>
-        <img src="images/server.png" alt="Server illustration">
-    </section>
-
-    <!-- Sub-header Section -->
-    <section class="features-sub-head">
-        <div>
-            <h1>The Loruki Platform</h1>
-            <p>Loruki offers unparalleled reliability, scalability, and performance to help you deploy and manage your cloud resources with ease.</p>
-        </div>
-        <img src="images/server2.png" alt="Additional server illustration">
-    </section>
-
-    <!-- Features Section -->
-    <main class="features-main">
-        <div class="container">
-            <div class="card"><i class="fas fa-server fa-3x"></i>
-                <p>High-performance servers ensuring maximum uptime and speed for your applications.</p>
-            </div>
-            <div class="card"><i class="fas fa-network-wired fa-3x"></i>
-                <p>Effortless network management with advanced monitoring and security tools.</p>
-            </div>
-            <div class="card"><i class="fas fa-laptop-code fa-3x"></i>
-                <p>Developer-friendly tools and APIs for streamlined cloud integration.</p>
-            </div>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Head -->
+    <section class="features-head bg-primary py-3">
         <div class="container grid">
             <div>
-                <h1>Loruki</h1>
-                <p>&copy; 2020 Loruki</p>
+                <h1 class="xl">Features</h1>
+                <p class="lead">
+                    Check out the features of Loruki that separate us from the
+						competition
+                </p>
+            </div>
+            <img src="images/server.png" alt="">
+        </div>
+    </section>
+
+    <!-- Sub head -->
+    <section class="features-sub-head bg-light py-3">
+        <div class="container grid">
+            <div>
+                <h1 class="md">The Loruki Platform</h1>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor cupiditate dignissimos temporibus perspiciatis quae! Suscipit qui, consectetur ea consequatur, doloribus repellendus quasi, aut corporis nam alias culpa. Nostrum, inventore accusantium!
+                </p>
+            </div>
+            <img src="images/server2.png" alt="">
+        </div>
+    </section>
+
+    <section class="features-main my-2">
+        <div class="container grid grid-3">
+            <div class="card flex">
+                <i class="fas fa-server fa-3x"></i>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nemo saepe corrupti et dolorem voluptate at, nostrum rem voluptatem ab alias quia molestiae ea, libero nihil deserunt. Molestias, eum? Necessitatibus!</p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-network-wired fa-3x"></i>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                    recusandae perferendis culpa, reiciendis a itaque debitis qui vel
+                    dignissimos ipsum!
+                </p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-laptop-code fa-3x"></i>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+                    magnam.
+                </p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-database fa-3x"></i>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, a!
+                </p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-power-off fa-3x"></i>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+                    magnam.
+                </p>
+            </div>
+            <div class="card flex">
+                <i class="fas fa-upload fa-3x"></i>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis,
+                    magnam.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark py-5">
+        <div class="container grid grid-3">
+            <div>
+                <h1>Loruki
+                </h1>
+                <p>Copyright &copy; 2020</p>
             </div>
             <nav>
                 <ul>
@@ -253,5 +118,4 @@
         </div>
     </footer>
 </body>
-
 </html>
