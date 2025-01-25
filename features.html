@@ -10,25 +10,174 @@
     <meta name="author" content="Loruki Team">
 
     <!-- External Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Page Title -->
     <title>Loruki | Cloud Hosting For Everyone</title>
+
+    <!-- Inline Responsive Styles -->
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            max-width: 1200px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar li {
+            margin: 0 1rem;
+        }
+
+        .navbar a {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        /* Mobile Navbar */
+        @media (max-width: 768px) {
+            .navbar ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .navbar li {
+                margin: 0.5rem 0;
+            }
+        }
+
+        /* Header Section */
+        .features-head {
+            text-align: center;
+            color: white;
+            background: #333;
+            padding: 2rem 0;
+        }
+
+        .features-head img {
+            display: none;
+        }
+
+        @media (min-width: 768px) {
+            .features-head {
+                text-align: left;
+            }
+
+            .features-head img {
+                display: block;
+            }
+        }
+
+        /* Sub-header Section */
+        .features-sub-head {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            align-items: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .features-sub-head {
+                grid-template-columns: 1fr 1fr;
+                text-align: left;
+            }
+        }
+
+        /* Features Section */
+        .features-main {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .features-main .card {
+            background: #f4f4f4;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (min-width: 768px) {
+            .features-main {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Footer Section */
+        .footer {
+            color: white;
+            background: #333;
+            padding: 2rem 0;
+        }
+
+        .footer .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .footer .grid {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: left;
+            }
+        }
+
+        .social a {
+            margin: 0 0.5rem;
+            color: #ccc;
+        }
+
+        .social a:hover {
+            color: white;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Navbar Section -->
     <header class="navbar bg-light">
         <div class="container flex">
-            <!-- Website Logo -->
             <h1 class="logo">
                 <a href="index.html" aria-label="Navigate to Loruki Home">Loruki.</a>
             </h1>
-            <!-- Navigation Links -->
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -41,38 +190,25 @@
 
     <!-- Features Header Section -->
     <section class="features-head bg-primary py-3">
-        <div class="container grid">
-            <!-- Header Content -->
-            <div>
-                <h1 class="xl">Features</h1>
-                <p class="lead">
-                    Discover what sets Loruki apart from the competition.
-                </p>
-            </div>
-            <!-- Header Image -->
-            <img src="images/server.png" alt="Server illustration">
+        <div class="container">
+            <h1 class="xl">Features</h1>
+            <p class="lead">Discover what sets Loruki apart from the competition.</p>
         </div>
     </section>
 
     <!-- Sub-header Section -->
     <section class="features-sub-head bg-light py-3">
-        <div class="container grid">
-            <!-- Sub-header Content -->
-            <div>
-                <h1 class="md">The Loruki Platform</h1>
-                <p>
-                    Loruki offers unparalleled reliability, scalability, and performance to help you deploy and manage your cloud resources with ease.
-                </p>
-            </div>
-            <!-- Sub-header Image -->
-            <img src="images/server2.png" alt="Additional server illustration">
+        <div class="container">
+            <h1 class="md">The Loruki Platform</h1>
+            <p>
+                Loruki offers unparalleled reliability, scalability, and performance to help you deploy and manage your cloud resources with ease.
+            </p>
         </div>
     </section>
 
     <!-- Features Main Section -->
     <main class="features-main my-2">
-        <div class="container grid grid-3">
-            <!-- Feature Cards -->
+        <div class="container">
             <div class="card flex">
                 <i class="fas fa-server fa-3x"></i>
                 <p>High-performance servers ensuring maximum uptime and speed for your applications.</p>
@@ -85,44 +221,14 @@
                 <i class="fas fa-laptop-code fa-3x"></i>
                 <p>Developer-friendly tools and APIs for streamlined cloud integration.</p>
             </div>
-            <div class="card flex">
-                <i class="fas fa-database fa-3x"></i>
-                <p>Robust database solutions tailored to handle your data with reliability and speed.</p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-power-off fa-3x"></i>
-                <p>One-click deployment ensures your applications go live without any hassle.</p>
-            </div>
-            <div class="card flex">
-                <i class="fas fa-upload fa-3x"></i>
-                <p>Seamless uploads with automatic backups for complete data protection.</p>
-            </div>
         </div>
     </main>
 
     <!-- Footer Section -->
     <footer class="footer bg-dark py-5">
-        <div class="container grid grid-3">
-            <!-- Footer Branding -->
-            <div>
-                <h1>Loruki</h1>
-                <p>Copyright &copy; 2020</p>
-            </div>
-            <!-- Footer Navigation Links -->
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="features.html">Features</a></li>
-                    <li><a href="docs.html">Docs</a></li>
-                </ul>
-            </nav>
-            <!-- Social Media Links -->
-            <div class="social">
-                <a href="#" aria-label="Visit GitHub"><i class="fab fa-github fa-2x"></i></a>
-                <a href="#" aria-label="Visit Facebook"><i class="fab fa-facebook fa-2x"></i></a>
-                <a href="#" aria-label="Visit Instagram"><i class="fab fa-instagram fa-2x"></i></a>
-                <a href="#" aria-label="Visit Twitter"><i class="fab fa-twitter fa-2x"></i></a>
-            </div>
+        <div class="container">
+            <h1>Loruki</h1>
+            <p>&copy; 2020 Loruki</p>
         </div>
     </footer>
 </body>
