@@ -1,0 +1,176 @@
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Defining custom CSS variables for colors */
+:root {
+  --primary-color: #047aed; /* Main theme color */
+  --secondary-color: #1c3fa8; /* Secondary theme color */
+  --dark-color: #002240; /* Darker theme color for text or backgrounds */
+  --light-color: #f4f4f4; /* Light color for backgrounds */
+  --success-color: #5cb85c; /* Success messages or states */
+  --error-color: #d9534f; /* Error messages or states */
+}
+
+/* Resetting box model and removing default padding/margin */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Lato', sans-serif; /* Applying the Lato font */
+  color: #333; /* Default text color */
+  line-height: 1.6; /* Line spacing for better readability */
+}
+
+/* Removing default list styles */
+ul {
+  list-style-type: none;
+}
+
+/* Styling links */
+a {
+  text-decoration: none; /* Removing underline */
+  color: #333; /* Default link color */
+}
+
+/* Headings styling */
+h1, h2 {
+  font-weight: 300; /* Light font weight for headings */
+  line-height: 1.2; /* Tighter line height for headings */
+  margin: 10px 0; /* Space above and below */
+}
+
+/* Paragraph styling */
+p {
+  margin: 10px 0; /* Space above and below paragraphs */
+}
+
+/* Making images responsive */
+img {
+  width: 100%;
+}
+
+/* Code block styling */
+code, pre {
+  background: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 10px; /* Padding for readability */
+}
+
+/* Hidden elements */
+.hidden {
+  visibility: hidden; /* Element is invisible */
+  height: 0; /* No space occupied */
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--primary-color); /* Primary color */
+  color: #fff; /* White text */
+  height: 70px; /* Fixed navbar height */
+}
+
+.navbar ul {
+  display: flex; /* Horizontal list items */
+}
+
+.navbar a {
+  color: #fff; /* White links */
+  padding: 10px; /* Padding for clickable area */
+  margin: 0 5px; /* Spacing between links */
+}
+
+.navbar ul a:hover {
+  border-bottom: 2px #fff solid; /* Underline effect on hover */
+}
+
+.navbar .flex {
+  justify-content: space-between; /* Spread items evenly */
+}
+
+/* Showcase section */
+.showcase {
+  height: 400px; /* Fixed height */
+  background-color: var(--primary-color); /* Primary color */
+  color: #fff; /* White text */
+  position: relative; /* For pseudo-elements */
+}
+
+.showcase h1 {
+  font-size: 40px; /* Large font size */
+}
+
+.showcase p {
+  margin: 20px 0; /* Space around text */
+}
+
+.showcase .grid {
+  overflow: visible; /* Allow overflow */
+  grid-template-columns: 55% auto; /* Two-column layout */
+  gap: 30px; /* Space between columns */
+}
+
+.showcase-text {
+  animation: slideInFromLeft 1s ease-in; /* Slide-in effect */
+}
+
+.showcase-form {
+  position: relative; /* Positioned inside the showcase */
+  top: 60px; /* Adjust placement */
+  height: 350px; /* Fixed height */
+  width: 400px; /* Fixed width */
+  padding: 40px; /* Padding inside the form */
+  z-index: 100; /* Place above other elements */
+  justify-self: flex-end; /* Align to the right */
+  animation: slideInFromRight 1s ease-in; /* Slide-in effect */
+}
+
+/* Input field styles */
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+  border: 0; /* No border */
+  border-bottom: 1px solid #b4becb; /* Underline */
+  width: 100%; /* Full width */
+  padding: 3px; /* Inner padding */
+  font-size: 16px; /* Text size */
+}
+
+.showcase-form input:focus {
+  outline: none; /* No outline on focus */
+}
+
+/* Diagonal white section at the bottom */
+.showcase::before, .showcase::after {
+  content: ''; /* Empty pseudo-element */
+  position: absolute; /* Positioned relative to parent */
+  height: 100px; /* Height of skewed section */
+  bottom: -70px; /* Adjust placement */
+  right: 0; /* Full width */
+  left: 0;
+  background: #fff; /* White background */
+  transform: skewY(-3deg); /* Skewed effect */
+}
+
+/* Stats section */
+.stats {
+  padding-top: 100px; /* Space above stats */
+  animation: slideInFromBottom 1s ease-in; /* Slide-in effect */
+}
+
+.stats-heading {
+  max-width: 500px; /* Limit width */
+  margin: auto; /* Center align */
+}
+
+/* Responsive design for smaller devices */
+@media (max-width: 500px) {
+  .navbar {
+    height: 110px; /* Adjust navbar height */
+  }
+  .navbar .flex {
+    flex-direction: column; /* Stack items vertically */
+  }
+}
