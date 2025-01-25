@@ -1,39 +1,49 @@
+/* Global Styles */
+/* Setting container max-width for centralized layout and adding responsive padding */
 .container {
-  max-width: 1100px;
-  margin: 0 auto;
-  overflow: auto;
-  padding: 0 40px;
+  max-width: 1100px; /* Maximum width to prevent content stretching */
+  margin: 0 auto; /* Center container horizontally */
+  overflow: auto; /* Ensure content doesn't overflow */
+  padding: 0 40px; /* Horizontal padding for breathing space */
 }
 
+/* Card Component */
+/* Reusable card styling for consistent design */
 .card {
-  background-color: #fff;
-  color: #333;
-  border-radius: 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  margin: 10px;
+  background-color: #fff; /* White background for cards */
+  color: #333; /* Neutral text color */
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  padding: 20px; /* Inner spacing */
+  margin: 10px; /* Outer spacing */
 }
 
+/* Button Styles */
+/* Base button styling */
 .btn {
-  display: inline-block;
-  padding: 10px 30px;
-  cursor: pointer;
-  background: var(--primary-color);
-  color: #fff;
-  border: none;
-  border-radius: 5px;
+  display: inline-block; /* Inline-block for flexibility */
+  padding: 10px 30px; /* Inner padding for a comfortable click area */
+  cursor: pointer; /* Pointer cursor on hover */
+  background: var(--primary-color); /* Primary color for buttons */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.2s ease; /* Smooth scaling effect */
 }
 
+/* Outline button style */
 .btn-outline {
-  background-color: transparent;
-  border: 1px #fff solid;
+  background-color: transparent; /* Transparent background */
+  border: 1px solid #fff; /* White border */
 }
 
+/* Button hover effect */
 .btn:hover {
-  transform: scale(0.98);
+  transform: scale(0.98); /* Slight shrinking effect */
 }
 
-/* Backgrounds & colored buttons */
+/* Background Colors */
+/* Reusable background and button color classes */
 .bg-primary,
 .btn-primary {
   background-color: var(--primary-color);
@@ -58,16 +68,18 @@
   color: #333;
 }
 
+/* Link colors within buttons and backgrounds */
 .bg-primary a,
 .btn-primary a,
 .bg-secondary a,
 .btn-secondary a,
 .bg-dark a,
 .btn-dark a {
-  color: #fff;
+  color: #fff; /* Ensure link text is visible */
 }
 
-/* Text colors */
+/* Text Colors */
+/* Utility classes for text coloring */
 .text-primary {
   color: var(--primary-color);
 }
@@ -84,151 +96,105 @@
   color: var(--light-color);
 }
 
-/* Text sizes */
+/* Typography Sizes */
+/* Utility classes for text size */
 .lead {
-  font-size: 20px;
+  font-size: 20px; /* Slightly larger text */
 }
 
 .sm {
-  font-size: 1rem;
+  font-size: 1rem; /* Small text */
 }
 
 .md {
-  font-size: 2rem;
+  font-size: 2rem; /* Medium-sized text */
 }
 
 .lg {
-  font-size: 3rem;
+  font-size: 3rem; /* Large text */
 }
 
 .xl {
-  font-size: 4rem;
+  font-size: 4rem; /* Extra-large text */
 }
 
 .text-center {
-  text-align: center;
+  text-align: center; /* Center align text */
 }
 
-/* Alert */
+/* Alert Messages */
+/* Base alert styling */
 .alert {
-  background-color: var(--light-color);
-  padding: 10px 20px;
-  font-weight: bold;
-  margin: 15px 0;
+  background-color: var(--light-color); /* Light background */
+  padding: 10px 20px; /* Padding for spacing */
+  font-weight: bold; /* Bold text for emphasis */
+  margin: 15px 0; /* Spacing around alerts */
+  border-radius: 5px; /* Rounded corners */
 }
 
 .alert i {
-  margin-right: 10px;
+  margin-right: 10px; /* Spacing for icons */
 }
 
+/* Success and Error alerts */
 .alert-success {
-  background-color: var(--success-color);
+  background-color: var(--success-color); /* Green for success */
   color: #fff;
 }
 
 .alert-error {
-  background-color: var(--error-color);
+  background-color: var(--error-color); /* Red for errors */
   color: #fff;
 }
 
+/* Flexbox Utilities */
+/* Flexible box alignment utilities */
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  display: flex; /* Flexible layout */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100%; /* Full height alignment */
 }
 
+/* Grid Layout Utilities */
+/* Base grid with two equal columns */
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 20px; /* Space between items */
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
+/* Three-column grid */
 .grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Three equal columns */
 }
 
-/* Margin */
-.my-1 {
-  margin: 1rem 0;
-}
+/* Spacing Utilities */
+/* Margin classes */
+.my-1 { margin: 1rem 0; }
+.my-2 { margin: 1.5rem 0; }
+.my-3 { margin: 2rem 0; }
+.my-4 { margin: 3rem 0; }
+.my-5 { margin: 4rem 0; }
 
-.my-2 {
-  margin: 1.5rem 0;
-}
+.m-1 { margin: 1rem; }
+.m-2 { margin: 1.5rem; }
+.m-3 { margin: 2rem; }
+.m-4 { margin: 3rem; }
+.m-5 { margin: 4rem; }
 
-.my-3 {
-  margin: 2rem 0;
-}
+/* Padding classes */
+.py-1 { padding: 1rem 0; }
+.py-2 { padding: 1.5rem 0; }
+.py-3 { padding: 2rem 0; }
+.py-4 { padding: 3rem 0; }
+.py-5 { padding: 4rem 0; }
 
-.my-4 {
-  margin: 3rem 0;
-}
-
-.my-5 {
-  margin: 4rem 0;
-}
-
-.m-1 {
-  margin: 1rem;
-}
-
-.m-2 {
-  margin: 1.5rem;
-}
-
-.m-3 {
-  margin: 2rem;
-}
-
-.m-4 {
-  margin: 3rem;
-}
-
-.m-5 {
-  margin: 4rem;
-}
-
-/* Padding */
-.py-1 {
-  padding: 1rem 0;
-}
-
-.py-2 {
-  padding: 1.5rem 0;
-}
-
-.py-3 {
-  padding: 2rem 0;
-}
-
-.py-4 {
-  padding: 3rem 0;
-}
-
-.py-5 {
-  padding: 4rem 0;
-}
-
-.p-1 {
-  padding: 1rem;
-}
-
-.p-2 {
-  padding: 1.5rem;
-}
-
-.p-3 {
-  padding: 2rem;
-}
-
-.p-4 {
-  padding: 3rem;
-}
-
-.p-5 {
-  padding: 4rem;
-}
+.p-1 { padding: 1rem; }
+.p-2 { padding: 1.5rem; }
+.p-3 { padding: 2rem; }
+.p-4 { padding: 3rem; }
+.p-5 { padding: 4rem; }
